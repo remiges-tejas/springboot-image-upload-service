@@ -58,7 +58,7 @@ public class ImageController {
         }
 
         // Save the file with its original name
-        String fileName =  "_uploaded_s"+file.getOriginalFilename();
+        String fileName = "_uploaded_s" + file.getOriginalFilename();
         Path filePath = uploadPath.resolve(fileName);
         Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 

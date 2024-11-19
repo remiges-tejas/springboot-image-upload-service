@@ -9,9 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class RandomGenaratorController {
 
     @GetMapping
-    public double genrateRandomPassword() {
+    public int genrateRandomPassword() {
 
-        double randPass = Math.random() * 10;
+        int max = 10000;
+        int min = 0;
+        int range = max - min + 1;
+
+        int randPass = (int) Math.floor(Math.random() * range);
         return randPass;
     }
 
